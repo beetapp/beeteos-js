@@ -1,6 +1,6 @@
 import sha256 from "crypto-js/sha256.js";
 import BeetConnection from "./lib/BeetConnection.js";
-const allowedChains = ["ANY", "BTS", "BNB_TEST", "STEEM", "BTC"];
+const allowedChains = ["ANY", "BTS", "BTS_TEST", "EOS", "TLOS", "TUSC", "BEOS"];
 import { io } from "socket.io-client";
 
 let httpPort = 60555;

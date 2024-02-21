@@ -1,12 +1,12 @@
-# BeetJS
+# BeeteosJS
 
-BeetJS is a client library for interaction with Beet (https://github.com/bitshares/beet).
+BeeteosJS is a client library for interaction with Beet (https://github.com/beetapp/beeteos).
 
 ## Installation
 
 ### Node module
 
-    npm install @beetapp/beet-js
+npm install git+https://github.com/beetapp/beeteos-js.git#develop
 
 ## Examples
 
@@ -14,10 +14,13 @@ Examples to try and play around can be found in `examples` folder. Basically the
 
 ### Library injection
 
-Powerful and easy way to integrate Beet is by using injection. Not supported for all chains yet.
+Powerful and easy way to integrate Beeteos is by using injection.
 
 List of supported blockchains:
+
  - BitShares
- - Steem
- - BinanceChain
- - Bitcoin
+ - EOS
+ - TUSC
+ - TLOS
+ - BEOS
+ - Bitshares testnet

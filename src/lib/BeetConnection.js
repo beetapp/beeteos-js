@@ -8,14 +8,6 @@ import aes from "crypto-js/aes.js";
 import ENC from 'crypto-js/enc-utf8.js';
 import * as ed from '@noble/ed25519';
 
-import {
-  stringToTx,
-  txToString,
-  binanceInjection
-} from './blockchains/Binance.js';
-import { steemInjection } from './blockchains/Steem.js';
-import { checkBeet } from '../index.js';
-
 class BeetConnection {
 
     constructor(appName, appHash, browser, origin, identity) {
@@ -388,7 +380,7 @@ class BeetConnection {
     }
 
     /*
-     * Inject an external blockchain library into Beet-JS
+     * Inject an external blockchain library into beeteos-js
      */
     inject(pointOfInjection, options = {sign: true, broadcast: true}) {
         if (this.identity.chain == "BTS" || this.identity.chain == "BTS_TEST" || this.identity.chain == "TUSC") {
@@ -406,29 +398,6 @@ class BeetConnection {
             }
         }
         throw new Error("Unsupported point of injection")
-    }
-
-    /**
-     * Enable the user to inject the binancejs library for advanced binance chain interaction
-     *
-     * @param {Module} binancejs User supplied binance js module
-     * @param {object} options
-     * @returns {Module}
-     */
-    injectBinanceLib(binancejs, options) {
-        let sendRequest = this.sendRequest.bind(this);
-        return binanceInjection(binancejs, options);
-    }
-
-    /**
-     * Enable the user to inject the steemjs library for advanced steem chain interaction
-     *
-     * @param {Module} steemjs
-     * @returns {Module}
-     */
-    injectSteemLib(steem) {
-        let sendRequest = this.sendRequest.bind(this);
-        return steemInjection(steem);
     }
 
     /**
@@ -601,27 +570,6 @@ class BeetConnection {
     }
 
     /**
-     * Requests a vote for specified votable object
-     *
-     * @param payload
-     * @returns {Promise} Resolving is done by Beet
-     */
-    async voteFor(payload) {
-      let vote;
-      try {
-        vote = this.sendRequest('api', {
-            method: 'voteFor',
-            params: payload
-        });
-      } catch (error) {
-        console.log(error);
-        return;
-      }
-
-      return vote;
-    }
-
-    /**
      * Requests to execute a library call for the linked chain
      *
      * @param payload
@@ -707,27 +655,6 @@ class BeetConnection {
       }
 
       return result;
-    }
-
-    /**
-     * Requests to execute a transfer for the linked chain
-     *
-     * @param payload
-     * @returns {Promise} Resolving is done by Beet
-     */
-    async transfer(payload) {
-      let beetTransfer;
-      try {
-        beetTransfer = await this.sendRequest('api', {
-            method: 'transfer',
-            params: payload
-        });
-      } catch (error) {
-        console.log(error)
-        return;
-      }
-
-      return beetTransfer;
     }
 }
 

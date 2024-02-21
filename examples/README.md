@@ -1,4 +1,4 @@
-# Beet-JS Examples
+# Beeteos-JS Examples
 
 These examples require the NodeJS runtime installed prior to running.
 
@@ -49,22 +49,6 @@ Prompts user to relink with stored identity.
 `node .\bitshares\signedMessage.js`
 
 Signs then immediately verifies the message, prompts the user 3 times.
-
-Prompts user to relink with stored identity.
-
-## Transfer blockchain assets
-
-`node .\bitshares\transfer.js`
-
-Transfer bitshares to another account, edit the script prior to running.
-
-Prompts user to relink with stored identity.
-
-## Vote for a vote object on the Bitshares blockchain
-
-`node .\bitshares\vote.js`
-
-Vote for a single Bitshares vote id.
 
 Prompts user to relink with stored identity.
 

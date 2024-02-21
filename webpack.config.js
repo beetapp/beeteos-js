@@ -1,11 +1,10 @@
 import path from 'path';
-import webpack from 'webpack';
 
 const config = {
     mode: "production",
     output: {
       path: path.resolve('./dist'),
-      filename: 'beet-js.js',
+      filename: 'beeteos-js.js',
     },
     optimization: {
       minimize: true,
