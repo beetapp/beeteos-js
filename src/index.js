@@ -7,7 +7,7 @@ let httpPort = 60555;
 let httpsPort = 60554;
 
 /**
- * Gets an instance of a beet connected application, and does the identity handling for the requested chain.
+ * Gets an instance of a beeteos connected application, and does the identity handling for the requested chain.
  *
  * @param {String} appName
  * @param {String} browser (User browser)
@@ -58,8 +58,8 @@ export const connect = async function (
     }
 
     if (!ssl && !http) {
-      console.log("Beet is offline, launch it then try again.");
-      return reject("Beet is offline");
+      console.log("Beeteos is offline, launch it then try again.");
+      return reject("Beeteos is offline");
     }
 
     let authToken;
@@ -99,7 +99,7 @@ export const connect = async function (
 }
 
 /**
- * Gets an instance of a beet connected application, and does the identity handling for the requested chain.
+ * Gets an instance of a beeteos connected application, and does the identity handling for the requested chain.
  *
  * @param {String} chain (Target blockchain)
  * @param {BeetConnection} beetConnection (Provide stored connection)
@@ -112,7 +112,7 @@ export const link = async function (chain = 'ANY', beetConnection) {
   }
 
   if (!beetConnection) {
-    console.log("No beet connection for link request");
+    console.log("No beeteos connection for link request");
     return;
   }
 
@@ -126,7 +126,7 @@ export const link = async function (chain = 'ANY', beetConnection) {
 }
 
 /**
- * Checks for a Beet web socket response
+ * Checks for a beeteos web socket response
  * @param {boolean} enableSSL
  * @returns {boolean} Resolves to true (if installed) and false (not installed)
 */

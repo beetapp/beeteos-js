@@ -1,6 +1,6 @@
 # BeeteosJS
 
-BeeteosJS is a client library for interaction with Beet (https://github.com/beetapp/beeteos).
+BeeteosJS is a client library for interaction with beeteos (https://github.com/beetapp/beeteos).
 
 ## Installation
 

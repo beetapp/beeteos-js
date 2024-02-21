@@ -4,31 +4,31 @@ These examples require the NodeJS runtime installed prior to running.
 
 Navigate to this folder in a new terminal then run `yarn install` to install the dependencies for the bitshares examples.
 
-Launch and unlock your Beet client prior to running an example.
+Launch and unlock your beeteos client prior to running an example.
 
 Several examples include variables you can change, do so prior to running them.
 
-The examples below when run will prompt the Beet user multiple times for linking, retrieving data and for performing blockchain actions on your behalf.
+The examples below when run will prompt the beeteos user multiple times for linking, retrieving data and for performing blockchain actions on your behalf.
 
 ## Storing linked identity for later session relink
 
 These examples use the package `lowdb` to store your linked identity in a db.json file.
 
-If you want your users to be able to relink with BEET then you'll need to implement similar functionality storing the identity values for later use either to file or to localstorage.
+If you want your users to be able to relink with beeteos then you'll need to implement similar functionality storing the identity values for later use either to file or to localstorage.
 
-## Connect to the Beet wallet
+## Connect to the beeteos wallet
 
 `node .\connect.js`
 
-This establishes a socket.io connection with the Beet wallet locally.
+This establishes a socket.io connection with the beeteos wallet locally.
 
-## Link app to the Beet wallet
+## Link app to the beeteos wallet
 
 `node .\link.js`
 
 After connecting, you must link your app to the wallet prior to interacting with the wallet and associated blockchains.
 
-## Retreive Beet account summary
+## Retreive beeteos account summary
 
 `node .\bitshares\getAccount.js`
 
@@ -40,7 +40,7 @@ Prompts user to relink with stored identity.
 
 `node .\bitshares\inject.js`
 
-Construct advanced bitshares transactions then broadcast them to the Bitshares network via the Beet wallet.
+Construct advanced bitshares transactions then broadcast them to the Bitshares network via the beeteos wallet.
 
 Prompts user to relink with stored identity.
 
